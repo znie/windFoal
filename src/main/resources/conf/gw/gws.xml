@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gws>
+    <gw id="login" name="登陆">
+        <request>
+            <filed id="loginId" tag="loginId" title="登陆ID"></filed>
+            <filed id="password" tag="password" title="登陆密码"></filed>
+        </request>
+        <response>
+            <filed id="custno" title="客户号"></filed>
+            <list id="accts" tag="acctList">
+                <filed id="acctNo" tag="acctNo" title="账号"></filed>
+                <filed id="acctName" tag="acctName" title="户名"></filed>
+                <!--如果是dict 则字段回返回  "acctType":{"name":"1",value="信用卡"} -->
+                <filed id="acctType" tag="acctType" title="账户类型"></filed>
+            </list>
+        </response>
+    </gw>
+</gws>

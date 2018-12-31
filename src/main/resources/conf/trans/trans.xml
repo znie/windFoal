@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+fe：无需登陆交易
+fa: 需要登陆才能做的交易
+-->
+<trans>
+    <tran id="/fe/login" name="登陆" gw="login">
+        <request>
+            <param id="loginId" title="登陆ID" required="true" validate=""></param>
+        </request>
+        <response>
+            <param id="custno" title="客户号"></param>
+            <list id="accts">
+                <param id="acctNo" title="账号"></param>
+                <param id="acctName" title="户名"></param>
+                <!--如果是dict 则次字段回返回  "acctType":{"name":"1",value="信用卡"} -->
+                <param id="acctType" title="账户类型" isDict="true"></param>
+            </list>
+        </response>
+    </tran>
+</trans>

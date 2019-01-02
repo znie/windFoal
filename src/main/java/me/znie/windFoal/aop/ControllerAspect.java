@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.support.RequestContext;
+import org.springframework.web.context.request.RequestContextHolder;
 
 import java.lang.reflect.Method;
 
@@ -33,6 +33,7 @@ public class ControllerAspect {
     public void before(JoinPoint joinPoint){
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
+
         Secret action = method.getAnnotation(Secret.class);
         System.out.println("方法规则式拦截,"+method.getName());
     }
@@ -43,7 +44,6 @@ public class ControllerAspect {
         Method method = signature.getMethod();
         Secret action = method.getAnnotation(Secret.class);
         System.out.println("注解式拦截 " + action.path());
-        ServletAct
     }
 
 

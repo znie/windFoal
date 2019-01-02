@@ -34,10 +34,4 @@ public class XmlParser {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args){
-        XmlParser.getXml("C:\\workspace\\me.znie\\windFoal\\src\\main\\resources\\conf\\trans\\trans.xml");
-        XmlParser.getXml("C:\\workspace\\me.znie\\windFoal\\src\\main\\resources\\conf\\gw\\gws.xml");
-        System.out.println(XmlContainer.getINSTANCE().getAllKeys());
-    }
 }

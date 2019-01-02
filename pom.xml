@@ -86,12 +86,35 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.8.5</version>
         </dependency>
-        <!-- spring mvc支持 -->
+
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
+            <artifactId>spring-web</artifactId>
             <version>${spring-framework.version}</version>
         </dependency>
+
+        <!-- &lt;!&ndash;
+         spring mvc支持 &ndash;&gt;
+         <dependency>
+             <groupId>org.springframework</groupId>
+             <artifactId>spring-webmvc</artifactId>
+             <version>${spring-framework.version}</version>
+         </dependency>
+         &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.struts/struts2-core &ndash;&gt;
+         <dependency>
+             <groupId>org.apache.struts</groupId>
+             <artifactId>struts2-core</artifactId>
+             <version>2.3.36</version>
+         </dependency>-->
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+
     </dependencies>
 
 </project>
